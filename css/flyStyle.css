@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  -webit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-text-size-adjust: none!important;
+  margin: 0;
+  padding: 0;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+a,
+a:link,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Microsoft YaHei", "微软雅黑", "SimSun", "宋体";
+}
