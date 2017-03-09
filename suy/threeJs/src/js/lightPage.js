@@ -47,28 +47,28 @@ function createCar(scene, renderer) {
 
   //add four torus
   var torus1 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 18),
-    new THREE.MeshBasicMaterial({
+    new THREE.MeshLambertMaterial({
       color: 0x666666
     })
   );
   torus1.position.set(5, -1, -3);
   torus1.rotateY(Math.PI / 2);
   var torus2 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 18),
-    new THREE.MeshBasicMaterial({
+    new THREE.MeshLambertMaterial({
       color: 0x666666
     })
   );
   torus2.position.set(5, -1, 3);
   torus2.rotateY(Math.PI / 2);
   var torus3 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 18),
-    new THREE.MeshBasicMaterial({
+    new THREE.MeshLambertMaterial({
       color: 0x666666
     })
   );
   torus3.position.set(-5, -1, -3);
   torus3.rotateY(Math.PI / 2);
   var torus4 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 18),
-    new THREE.MeshBasicMaterial({
+    new THREE.MeshLambertMaterial({
       color: 0x666666
     })
   );
