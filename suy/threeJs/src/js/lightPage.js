@@ -23,6 +23,11 @@ function createCar(scene, renderer) {
   var light = new THREE.AmbientLight(0xffffff);
   scene.add(light);
 
+  // 添加平行光
+  var dLight = new THREE.DirectionalLight();
+  dLight.position.set(-4, -5, 3);
+  scene.add(dLight);
+
   // 设置立方体
   var cube = new THREE.Mesh(new THREE.CubeGeometry(6, 4, 8),
     new THREE.MeshLambertMaterial({
