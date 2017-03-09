@@ -21,7 +21,7 @@ function createCar(scene, renderer) {
 
   // 设置立方体
   var cube = new THREE.Mesh(new THREE.CubeGeometry(6, 4, 8),
-    new THREE.MeshBasicMaterial({
+    new THREE.MeshLambertMaterial({
       color: 0xdedede
     })
   );
