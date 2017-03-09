@@ -20,7 +20,7 @@ function createCar(scene, renderer) {
   scene.add(camera);
 
   // 添加环境光
-  var light = new THREE.AmbientLight(0xffffff);
+  var light = new THREE.AmbientLight(0xdddddd);
   scene.add(light);
 
   // 添加平行光
