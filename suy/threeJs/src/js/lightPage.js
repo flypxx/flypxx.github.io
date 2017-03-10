@@ -19,19 +19,15 @@ function createCar(scene, renderer) {
   camera.lookAt(new THREE.Vector3(0, 0, 0));
   scene.add(camera);
 
-  // 添加环境光
-  var light = new THREE.AmbientLight(0xdddddd);
-  scene.add(light);
-
-  // 添加平行光
-  var dLight = new THREE.DirectionalLight();
-  dLight.position.set(-4, -5, 3);
+  // 添加点光源
+  var dLight = new THREE.PointLight(0xffffff, 1, 50);
+  dLight.position.set(10,15,-10);
   scene.add(dLight);
 
   // 设置立方体
   var cube = new THREE.Mesh(new THREE.CubeGeometry(6, 4, 8),
     new THREE.MeshLambertMaterial({
-      color: 0xdedede
+      color: 0xffff00
     })
   );
   scene.add(cube);
