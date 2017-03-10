@@ -39,6 +39,7 @@ function createCar(scene, renderer) {
       color: 0xffff00
     })
   );
+  cube.castShadow = true;
   scene.add(cube);
 
   // 设置两个圆柱体
@@ -93,10 +94,9 @@ function createCar(scene, renderer) {
 
   // 添加点光源
   var dLight = new THREE.PointLight(0xffffff, 1, 110);
-  dLight.position.set(20, 30, -20);
+  dLight.position.set(20, 30, 30);
   dLight.castShadow = true;
   dLight.target = cube;
-  dLight.castShadow = true;
   dLight.shadowCameraNear = 2;
   dLight.shadowCameraFar = 100;
   dLight.shadowCameraFov = 30;
