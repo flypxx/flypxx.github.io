@@ -17,7 +17,7 @@ function init() {
 }
 
 function createCar(scene, renderer) {
-  var camera = new THREE.OrthographicCamera(-10, 10, 7.5, -7.5, 1, 100);
+  var camera = new THREE.OrthographicCamera(-20, 20, 15, -15, 1, 100);
   camera.position.set(40, 36, -38);
   camera.lookAt(new THREE.Vector3(0, 0, 0));
   scene.add(camera);
