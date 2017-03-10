@@ -2,7 +2,8 @@
 function init() {
 
   var renderer = new THREE.WebGLRenderer({
-    canvas: document.getElementById('mainCanvas')
+    canvas: document.getElementById('mainCanvas'),
+    antialias: true
   });
 
   renderer.setClearColor(0xffffff);
@@ -24,7 +25,7 @@ function createCar(scene, renderer) {
   // 添加接受阴影的平面
   var plane = new THREE.Mesh(
     new THREE.PlaneGeometry(40, 40, 30, 30),
-    new THREE.MeshLambertMaterial({ color: 0xffff00 })
+    new THREE.MeshLambertMaterial({ color: 0x4a9a5a })
   );
   plane.rotation.x = -Math.PI / 2;
   // plane.rotation.y = -Math.PI / 2;
@@ -59,28 +60,28 @@ function createCar(scene, renderer) {
   scene.add(cylinder2);
 
   //add four torus
-  var torus1 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 18),
+  var torus1 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 60),
     new THREE.MeshLambertMaterial({
       color: 0x666666
     })
   );
   torus1.position.set(5, -1, -3);
   torus1.rotateY(Math.PI / 2);
-  var torus2 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 18),
+  var torus2 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 60),
     new THREE.MeshLambertMaterial({
       color: 0x666666
     })
   );
   torus2.position.set(5, -1, 3);
   torus2.rotateY(Math.PI / 2);
-  var torus3 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 18),
+  var torus3 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 60),
     new THREE.MeshLambertMaterial({
       color: 0x666666
     })
   );
   torus3.position.set(-5, -1, -3);
   torus3.rotateY(Math.PI / 2);
-  var torus4 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 18),
+  var torus4 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 60),
     new THREE.MeshLambertMaterial({
       color: 0x666666
     })
