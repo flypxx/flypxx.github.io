@@ -28,7 +28,6 @@ function createCar(scene, renderer) {
     new THREE.MeshLambertMaterial({ color: 0x4a9a5a })
   );
   plane.rotation.x = -Math.PI / 2;
-  // plane.rotation.y = -Math.PI / 2;
   plane.position.y = -3;
   plane.receiveShadow = true;
   scene.add(plane);
@@ -98,8 +97,8 @@ function createCar(scene, renderer) {
   dLight.castShadow = true;
   dLight.target = cube;
   dLight.shadowCameraNear = 2;
-  dLight.shadowCameraFar = 100;
-  dLight.shadowCameraFov = 30;
+  dLight.shadowCameraFar = 40;
+  dLight.shadowCameraFov = 60;
   dLight.shadowCameraVisible = true;
   dLight.shadowMapWidth = 1024;
   dLight.shadowMapHeight = 1024;
