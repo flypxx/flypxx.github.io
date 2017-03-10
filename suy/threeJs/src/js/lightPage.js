@@ -20,8 +20,8 @@ function createCar(scene, renderer) {
   scene.add(camera);
 
   // 添加点光源
-  var dLight = new THREE.PointLight(0xffffff, 1, 50);
-  dLight.position.set(10,15,-10);
+  var dLight = new THREE.PointLight(0xffffff, 1, 40);
+  dLight.position.set(10, 15, -10);
   scene.add(dLight);
 
   // 设置立方体
