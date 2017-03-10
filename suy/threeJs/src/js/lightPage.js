@@ -6,6 +6,7 @@ function init() {
   });
 
   renderer.setClearColor(0x000000);
+  renderer.shadowMapEnabled = true;
 
   var scene = new THREE.Scene();
 
