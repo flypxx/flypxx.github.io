@@ -93,15 +93,15 @@ function createCar(scene, renderer) {
   var dLight = new THREE.PointLight(0xffffff, 1, 40);
   dLight.position.set(10, 15, -10);
   dLight.castShadow = true;
-  light.target = cube;
-  light.castShadow = true;
-  light.shadowCameraNear = 2;
-  light.shadowCameraFar = 20;
-  light.shadowCameraFov = 60;
-  light.shadowCameraVisible = true;
-  light.shadowMapWidth = 1024;
-  light.shadowMapHeight = 1024;
-  light.shadowDarkness = 0.3;
+  dLight.target = cube;
+  dLight.castShadow = true;
+  dLight.shadowCameraNear = 2;
+  dLight.shadowCameraFar = 20;
+  dLight.shadowCameraFov = 60;
+  dLight.shadowCameraVisible = true;
+  dLight.shadowMapWidth = 1024;
+  dLight.shadowMapHeight = 1024;
+  dLight.shadowDarkness = 0.3;
   scene.add(dLight);
 
   renderer.render(scene, camera);
