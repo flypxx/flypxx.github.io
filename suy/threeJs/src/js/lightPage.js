@@ -5,7 +5,7 @@ function init() {
     canvas: document.getElementById('mainCanvas')
   });
 
-  renderer.setClearColor(0xfffff);
+  renderer.setClearColor(0xffffff);
   renderer.shadowMapEnabled = true;
   renderer.shadowMapSoft = true;
 
