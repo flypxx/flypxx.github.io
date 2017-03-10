@@ -7,6 +7,7 @@ function init() {
 
   renderer.setClearColor(0x000000);
   renderer.shadowMapEnabled = true;
+  renderer.shadowMapSoft = true;
 
   var scene = new THREE.Scene();
 
@@ -23,6 +24,7 @@ function createCar(scene, renderer) {
   // 添加点光源
   var dLight = new THREE.PointLight(0xffffff, 1, 40);
   dLight.position.set(10, 15, -10);
+  dLight.castShadow = true;
   scene.add(dLight);
 
   // 设置立方体
@@ -31,6 +33,7 @@ function createCar(scene, renderer) {
       color: 0xffff00
     })
   );
+  cube.receiveShadow = true;
   scene.add(cube);
 
   // 设置两个圆柱体
