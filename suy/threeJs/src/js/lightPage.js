@@ -5,7 +5,7 @@ function init() {
     canvas: document.getElementById('mainCanvas')
   });
 
-  renderer.setClearColor(0x000000);
+  renderer.setClearColor(0xfffff);
   renderer.shadowMapEnabled = true;
   renderer.shadowMapSoft = true;
 
@@ -27,13 +27,22 @@ function createCar(scene, renderer) {
   dLight.castShadow = true;
   scene.add(dLight);
 
+  // 添加接受阴影的平面
+  var plane = new THREE.Mesh(
+    new THREE.PlaneGeometry(10, 10, 16, 16),
+    new THREE.MeshLambertMaterial({ color: 0xcccccc })
+  );
+  plane.rotation.x = -Math.PI / 2;
+  plane.position.y = -3;
+  plane.receiveShadow = true;
+  scene.add(plane);
+
   // 设置立方体
   var cube = new THREE.Mesh(new THREE.CubeGeometry(6, 4, 8),
     new THREE.MeshLambertMaterial({
       color: 0xffff00
     })
   );
-  cube.receiveShadow = true;
   scene.add(cube);
 
   // 设置两个圆柱体
