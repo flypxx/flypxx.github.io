@@ -21,12 +21,6 @@ function createCar(scene, renderer) {
   camera.lookAt(new THREE.Vector3(0, 0, 0));
   scene.add(camera);
 
-  // 添加点光源
-  var dLight = new THREE.PointLight(0xffffff, 1, 40);
-  dLight.position.set(10, 15, -10);
-  dLight.castShadow = true;
-  scene.add(dLight);
-
   // 添加接受阴影的平面
   var plane = new THREE.Mesh(
     new THREE.PlaneGeometry(10, 10, 16, 16),
@@ -94,6 +88,21 @@ function createCar(scene, renderer) {
   torus4.rotateY(Math.PI / 2);
 
   scene.add(torus1, torus2, torus3, torus4);
+
+  // 添加点光源
+  var dLight = new THREE.PointLight(0xffffff, 1, 40);
+  dLight.position.set(10, 15, -10);
+  dLight.castShadow = true;
+  light.target = cube;
+  light.castShadow = true;
+  light.shadowCameraNear = 2;
+  light.shadowCameraFar = 20;
+  light.shadowCameraFov = 60;
+  light.shadowCameraVisible = true;
+  light.shadowMapWidth = 1024;
+  light.shadowMapHeight = 1024;
+  light.shadowDarkness = 0.3;
+  scene.add(dLight);
 
   renderer.render(scene, camera);
 }
