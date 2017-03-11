@@ -7,7 +7,7 @@ function init() {
   });
 
   renderer.setClearColor(0xffffff);
-  renderer.shadowMapEnabled = true;
+  renderer.shadowMap.enabled = true;
   renderer.shadowMapSoft = true;
 
   var scene = new THREE.Scene();
