@@ -42,6 +42,18 @@ function createCar(scene, renderer) {
   cube.castShadow = true;
   scene.add(cube);
 
+  // 添加点光源
+  var dLight = new THREE.PointLight(0xffffff, 1, 100);
+  dLight.position.set(20, 30, 30);
+  dLight.castShadow = true;
+  scene.add(dLight);
+  dLight.target = cube;
+  dLight.shadow.camera.near = 2;
+  dLight.shadow.camera.far = 40;
+  dLight.shadow.camera.fov = 60;
+  dLight.shadow.mapSize.width = 1024;
+  dLight.shadow.mapSize.height = 1024;
+
   // 设置两个圆柱体
   var cylinder1 = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 10, 18, 3),
     new THREE.MeshLambertMaterial({
@@ -92,18 +104,6 @@ function createCar(scene, renderer) {
 
   scene.add(torus1, torus2, torus3, torus4);
 
-  // 添加点光源
-  var dLight = new THREE.PointLight(0xffffff, 1, 100);
-  dLight.position.set(20, 30, 30);
-  dLight.castShadow = true;
-  dLight.target = cube;
-  dLight.shadow.camera.near = 2;
-  dLight.shadow.camera.far = 40;
-  dLight.shadow.camera.fov = 60;
-  // dLight.shadowCameraVisible = true;
-  dLight.shadow.mapSize.width = 1024;
-  dLight.shadow.mapSize.height = 1024;
-  scene.add(dLight);
   var helper = new THREE.CameraHelper( camera );
   scene.add( helper );
 
