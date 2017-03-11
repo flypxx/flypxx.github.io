@@ -103,7 +103,7 @@ function createCar(scene, renderer) {
   var helper = new THREE.CameraHelper( camera );
   scene.add( helper );
   dLight.shadow.mapSize.width = 1024;
-  dLight.shadowMapHeight = 1024;
+  dLight.shadow.mapSize.height = 1024;
   dLight.shadowDarkness = 0.3;
   scene.add(dLight);
 
