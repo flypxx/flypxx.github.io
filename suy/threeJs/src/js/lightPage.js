@@ -100,12 +100,11 @@ function createCar(scene, renderer) {
   dLight.shadow.camera.far = 40;
   dLight.shadow.camera.fov = 60;
   // dLight.shadowCameraVisible = true;
-  var helper = new THREE.CameraHelper( camera );
-  scene.add( helper );
   dLight.shadow.mapSize.width = 1024;
   dLight.shadow.mapSize.height = 1024;
-  dLight.shadowDarkness = 0.3;
   scene.add(dLight);
+  var helper = new THREE.CameraHelper( camera );
+  scene.add( helper );
 
   renderer.render(scene, camera);
 }
