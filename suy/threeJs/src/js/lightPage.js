@@ -92,7 +92,7 @@ function createCar(scene, renderer) {
   scene.add(torus1, torus2, torus3, torus4);
 
   // 添加点光源
-  var dLight = new THREE.PointLight(0xffffff, 1, 110);
+  var dLight = new THREE.PointLight(0xffffff, 1, 100);
   dLight.position.set(20, 30, 30);
   dLight.castShadow = true;
   dLight.target = cube;
