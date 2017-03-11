@@ -8,6 +8,7 @@ function init() {
 
   renderer.setClearColor(0xffffff);
   renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
   renderer.shadowMapSoft = true;
 
   var scene = new THREE.Scene();
