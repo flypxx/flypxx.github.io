@@ -98,7 +98,7 @@ function createCar(scene, renderer) {
   dLight.target = cube;
   dLight.shadow.camera.near = 2;
   dLight.shadow.camera.far = 40;
-  dLight.shadowCameraFov = 60;
+  dLight.shadow.camera.fov = 60;
   dLight.shadowCameraVisible = true;
   dLight.shadowMapWidth = 1024;
   dLight.shadowMapHeight = 1024;
