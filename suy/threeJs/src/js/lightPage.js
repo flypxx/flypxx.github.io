@@ -71,6 +71,7 @@ function createCar(scene, renderer) {
   );
   cylinder2.position.set(0, -1, -3);
   cylinder2.rotateZ(Math.PI / 2);
+  cylinder2.castShadow = true;
   scene.add(cylinder2);
 
   //add four torus
