@@ -109,7 +109,7 @@ function createCar(scene, renderer) {
   );
   torus4.position.set(-5, -1, 3);
   torus4.rotateY(Math.PI / 2);
-  torus4.castShadow = ture;
+  torus4.castShadow = true;
   scene.add(torus4);
 
   var helper = new THREE.CameraHelper( camera );
