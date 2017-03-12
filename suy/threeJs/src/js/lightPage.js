@@ -51,8 +51,8 @@ function createCar(scene, renderer) {
   // dLight.shadow.camera.near = 2;
   // dLight.shadow.camera.far = 40;
   // dLight.shadow.camera.fov = 60;
-  dLight.shadow.mapSize.width = 1024;
-  dLight.shadow.mapSize.height = 1024;
+  dLight.shadow.mapSize.width = 2048;
+  dLight.shadow.mapSize.height = 2048;
 
   // 设置两个圆柱体
   var cylinder1 = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 10, 18, 3),
