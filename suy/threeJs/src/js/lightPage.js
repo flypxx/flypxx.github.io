@@ -62,6 +62,7 @@ function createCar(scene, renderer) {
   );
   cylinder1.position.set(0, -1, 3);
   cylinder1.rotateZ(Math.PI / 2);
+  cylinder1.castShadow = true;
   scene.add(cylinder1);
   var cylinder2 = new THREE.Mesh(new THREE.CylinderGeometry(0.2, 0.2, 10, 18, 3),
     new THREE.MeshLambertMaterial({
