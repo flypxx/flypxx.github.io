@@ -82,6 +82,7 @@ function createCar(scene, renderer) {
   );
   torus1.position.set(5, -1, -3);
   torus1.rotateY(Math.PI / 2);
+  torus1.castShadow = true;
   var torus2 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 60),
     new THREE.MeshLambertMaterial({
       color: 0x666666
