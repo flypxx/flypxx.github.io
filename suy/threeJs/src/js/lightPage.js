@@ -106,6 +106,7 @@ function createCar(scene, renderer) {
   );
   torus4.position.set(-5, -1, 3);
   torus4.rotateY(Math.PI / 2);
+  torus4.castShadow = ture;
 
   scene.add(torus1, torus2, torus3, torus4);
 
