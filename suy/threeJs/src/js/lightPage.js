@@ -44,7 +44,7 @@ function createCar(scene, renderer) {
 
   // 添加点光源
   var dLight = new THREE.PointLight(0xffffff);
-  dLight.position.set(20, 30, 30);
+  dLight.position.set(30, 30, 20);
   dLight.castShadow = true;
   scene.add(dLight);
   dLight.target = cube;
@@ -83,7 +83,6 @@ function createCar(scene, renderer) {
   torus1.position.set(5, -1, -3);
   torus1.rotateY(Math.PI / 2);
   torus1.castShadow = true;
-  // scene.add(torus1);
   var torus2 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 60),
     new THREE.MeshLambertMaterial({
       color: 0x666666
@@ -92,7 +91,6 @@ function createCar(scene, renderer) {
   torus2.position.set(5, -1, 3);
   torus2.rotateY(Math.PI / 2);
   torus2.castShadow = true;
-  // scene.add(torus2);
   var torus3 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 60),
     new THREE.MeshLambertMaterial({
       color: 0x666666
@@ -101,7 +99,6 @@ function createCar(scene, renderer) {
   torus3.position.set(-5, -1, -3);
   torus3.rotateY(Math.PI / 2);
   torus3.castShadow = true;
-  // scene.add(torus3);
   var torus4 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.3, 12, 60),
     new THREE.MeshLambertMaterial({
       color: 0x666666
