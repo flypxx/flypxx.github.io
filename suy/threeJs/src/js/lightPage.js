@@ -112,8 +112,5 @@ function createCar(scene, renderer) {
   torus4.castShadow = true;
   scene.add(torus1, torus2, torus3, torus4);
 
-  var helper = new THREE.CameraHelper(camera);
-  scene.add(helper);
-
   renderer.render(scene, camera);
 }
