@@ -60,7 +60,7 @@ function createCar(scene, renderer) {
       // Function when resource is loaded
       function ( texture ) {
         // do something with the texture
-        materials.push(new THREE.MeshBasicMaterial({
+        materials.push(new THREE.MeshLambertMaterial({
           map: texture
         }));
       },
