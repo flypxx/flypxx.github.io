@@ -34,10 +34,27 @@ function createCar(scene, renderer) {
   scene.add(plane);
 
   // 设置立方体
-  var cube = new THREE.Mesh(new THREE.CubeGeometry(6, 4, 8),
-    new THREE.MeshLambertMaterial({
-      color: 0xffff00
-    })
+  // var cube = new THREE.Mesh(new THREE.CubeGeometry(6, 4, 8),
+  //   new THREE.MeshLambertMaterial({
+  //     color: 0xffff00
+  //   })
+  // );
+  // scene.add(cube);
+
+  var materials = [];
+  for (var i = 1; i < 7; ++i) {
+    materials.push(new THREE.MeshBasicMaterial({
+      map: THREE.ImageUtils.loadTexture('../img/' + i + '.png',
+        {}, function () {
+          renderer.render(scene, camera);
+        }),
+      overdraw: true
+    }));
+  }
+
+  var cube = new THREE.Mesh(
+    new THREE.CubeGeometry(6, 4, 8),
+    new THREE.MeshFaceMaterial(materials)
   );
   cube.castShadow = true;
   scene.add(cube);
