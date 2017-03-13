@@ -44,7 +44,7 @@ function createCar(scene, renderer) {
   var materials = [];
   for (var i = 1; i < 7; ++i) {
     materials.push(new THREE.MeshBasicMaterial({
-      map: THREE.ImageUtils.loadTexture('../img/' + i + '.png',
+      map: THREE.ImageUtils.loadTexture('../../img/' + i + '.png',
         {}, function () {
           renderer.render(scene, camera);
         }),
