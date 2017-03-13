@@ -86,7 +86,7 @@ function createCar(scene, renderer) {
 
   var cube = new THREE.Mesh(
     new THREE.CubeGeometry(6, 4, 8),
-    new THREE.MultiMaterial(materials)
+    materials
   );
   cube.castShadow = true;
   scene.add(cube);
