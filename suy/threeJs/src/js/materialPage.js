@@ -33,47 +33,6 @@ function createCar(scene, renderer) {
   plane.receiveShadow = true;
   scene.add(plane);
 
-  // 设置立方体
-  // var cube = new THREE.Mesh(new THREE.CubeGeometry(6, 4, 8),
-  //   new THREE.MeshLambertMaterial({
-  //     color: 0xffff00
-  //   })
-  // );
-  // scene.add(cube);
-
-  // for (var i = 1; i < 7; ++i) {
-  //   // materials.push(new THREE.MeshBasicMaterial({
-  //   //   map: THREE.ImageUtils.loadTexture('../../img/' + i + '.jpg',
-  //   //     {}, function () {
-  //   //       renderer.render(scene, camera);
-  //   //     }),
-  //   //   overdraw: true
-  //   // }));
-  //   // instantiate a loader
-  //   var loader = new THREE.TextureLoader();
-
-  //   // load a resource
-  //   loader.load(
-  //     // resource URL
-  //     '../../img/' + i + '.jpg',
-  //     // Function when resource is loaded
-  //     function (texture) {
-  //       // do something with the texture
-  //       materials.push(new THREE.MeshLambertMaterial({
-  //         map: texture
-  //       }));
-  //     },
-  //     // Function called when download progresses
-  //     function (xhr) {
-  //       console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-  //     },
-  //     // Function called when download errors
-  //     function (xhr) {
-  //       console.log('An error happened');
-  //     }
-  //   );
-  // }
-
   var loader = new THREE.TextureLoader();
   var materials = [];
   for (var i = 1; i < 7; ++i) {
