@@ -33,11 +33,19 @@ function createCar(scene, renderer) {
   plane.receiveShadow = true;
   scene.add(plane);
 
-  // 设置立方体
-  var cube = new THREE.Mesh(new THREE.CubeGeometry(6, 4, 8),
-    new THREE.MeshLambertMaterial({
-      color: 0xffff00
-    })
+  var loader = new THREE.TextureLoader();
+  var materials = [];
+  for (var i = 1; i < 7; ++i) {
+    materials.push(new THREE.MeshLambertMaterial({
+      map: loader.load('../../img/' + i + '.jpg', function (texture) {
+        renderer.render(scene, camera);
+      })
+    }));
+  }
+
+  var cube = new THREE.Mesh(
+    new THREE.CubeGeometry(6, 4, 8),
+    materials
   );
   cube.castShadow = true;
   scene.add(cube);
