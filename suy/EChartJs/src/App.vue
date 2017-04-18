@@ -8,12 +8,12 @@
 </template>
 
 <script>
-import echarts from 'common/js/echarts'
+// import echarts from 'common/js/echarts'
 export default {
   name: 'app',
   created() {
     (() => {
-      console.log(echarts)
+      // console.log(echarts)
       // var myChart = echarts.init(document.getElementById('main'))
       // // 绘制图表
       // myChart.setOption({
