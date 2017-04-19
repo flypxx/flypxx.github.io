@@ -10,7 +10,7 @@
 import echarts from 'echarts'
 export default {
   name: 'app',
-  created() {
+  mounted() {
     (() => {
       console.log(echarts)
       var myChart = echarts.init(document.getElementById('main'))
