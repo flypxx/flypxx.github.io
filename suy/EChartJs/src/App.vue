@@ -13,19 +13,50 @@ export default {
   mounted() {
     (() => {
       console.log(echarts)
-      var myChart = echarts.init(document.getElementById('main'))
+      let myChart = echarts.init(document.getElementById('main'))
+      let colors = ['#5793f3', '#c23531']
       // 绘制图表
       myChart.setOption({
-        title: { text: 'ECharts 入门示例' },
+        color: colors,
+        legend: {
+          data: ['销量', '产量']
+        },
+        title: { text: 'ECharts NO.1 Demo' },
         tooltip: {},
         xAxis: {
           data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
         },
-        yAxis: {},
+        yAxis: [
+          {
+            type: 'value',
+            name: '销量',
+            position: 'left',
+            axisLine: {
+              lineStyle: {
+                color: colors[0]
+              }
+            }
+          },
+          {
+            type: 'value',
+            name: '产量',
+            position: 'right',
+            axisLine: {
+              lineStyle: {
+                color: colors[1]
+              }
+            }
+          }
+        ],
         series: [{
           name: '销量',
           type: 'bar',
           data: [5, 20, 36, 10, 10, 20]
+        },
+        {
+          name: '产量',
+          type: 'line',
+          data: [6, 30, 22, 30, 13, 9]
         }]
       })
     })()
