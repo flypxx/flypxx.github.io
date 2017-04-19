@@ -30,6 +30,8 @@ export default {
           {
             type: 'value',
             name: '销量',
+            min: 0,
+            max: 40,
             position: 'left',
             axisLine: {
               lineStyle: {
@@ -40,6 +42,8 @@ export default {
           {
             type: 'value',
             name: '产量',
+            min: 0,
+            max: 40,
             position: 'right',
             axisLine: {
               lineStyle: {
@@ -56,6 +60,7 @@ export default {
         {
           name: '产量',
           type: 'line',
+          yAxisIndex: 1,
           data: [6, 30, 22, 30, 13, 9]
         }]
       })
