@@ -2,7 +2,7 @@
   <div class="page-header">
     <div class="nav">
       <div class="avatar">
-        <img src="/static/img/page.png">
+        <img src="/static/img/page.jpeg">
       </div>
       <div class="title">ECharts.js数据可视化Demo</div>
       <ul class="menu">
@@ -10,7 +10,7 @@
       </ul>
       <div class="user">
         <div class="avatar-container">
-          <img src="/static/img/avatar.png">
+          <img src="/static/img/avatar.jpeg">
         </div>
       </div>
     </div>
