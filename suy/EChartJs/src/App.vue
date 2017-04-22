@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <v-header></v-header>
-    <router-view></router-view>
+    <div class="page-container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 <script>
@@ -13,6 +15,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-
+<style lang="stylus" rel="stylesheet/stylus">
+  .page-container
+    margin-top 80px
 </style>
