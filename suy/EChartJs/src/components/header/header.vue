@@ -6,7 +6,9 @@
       </div>
       <div class="title">ECharts.js数据可视化Demo</div>
       <ul class="menu">
-        <li class="demo-list"></li>
+        <li class="demo-list" v-for="demo in demoList">
+          <router-link :to="demo.pathName"><span>{{demo.name}}</span></router-link>
+        </li>
       </ul>
       <div class="user">
         <div class="avatar-container">
@@ -20,7 +22,7 @@
   export default {
     data() {
       return {
-        demoLiat: [
+        demoList: [
           {
             'name': 'demoNo.1',
             'pathName': 'demoNo1'
