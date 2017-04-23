@@ -78,8 +78,14 @@
         .menu-item-title
           line-height 60px
           text-align center
-          background-color rgb(224, 105, 62)
-          color #fff
+          color rgb(224, 105, 62)
+          cursor pointer
+          &.active
+            background-color rgb(231, 139, 106)
+            color #fff
+          &:hover
+            background-color rgb(224, 105, 62)
+            color #fff
         .demo-list
           line-height 30px
           font-size 12px
