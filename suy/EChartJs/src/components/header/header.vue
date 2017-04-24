@@ -33,6 +33,10 @@
           {
             'name': 'demoNo.1',
             'pathName': 'demoNo1'
+          },
+          {
+            'name': 'demoNo.2',
+            'pathName': 'demoNo2'
           }
         ],
         showDemoList: false
