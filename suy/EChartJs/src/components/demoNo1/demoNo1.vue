@@ -1,7 +1,7 @@
 <template>
   <div class="demo-number-1">
     <div class="echartbox">
-      <div id="main" style="width: 600px;height:400px;"></div>
+      <div id="main" style="width: 600px;height:400px;" class="main"></div>
     </div>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
     (() => {
       console.log(echarts)
       let myChart = echarts.init(document.getElementById('main'))
-      let colors = ['#5793f3', '#c23531']
+      let colors = ['#5793f3', 'rgb(224, 105, 62)']
       // 绘制图表
       myChart.setOption({
         color: colors,
@@ -68,5 +68,11 @@ export default {
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
-
+.demo-number-1
+  width 100%
+  padding 20px
+  .echartbox
+    width 100%
+    .main
+      margin 0 auto
 </style>
