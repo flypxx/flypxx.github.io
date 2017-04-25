@@ -35,6 +35,7 @@ export default {
         yAxis: [
           {
             type: 'value',
+            inverse: true,
             min: 0,
             max: 40
           }
@@ -54,6 +55,9 @@ export default {
   }
 }
 </script>
-<style lang="stylus" rel="stylesheet/stylus">
-
+<style scoped lang="stylus" rel="stylesheet/stylus">
+  .echartbox
+    .demo2
+      margin 0 auto
+      padding 40px
 </style>
