@@ -41,6 +41,11 @@
         ],
         showDemoList: false
       }
+    },
+    methods: {
+      showPage() {
+        // 此处应该引入vuex来进行状态管理，还是使用路由管理好，我感觉路由管理应该可以了，思考下
+      }
     }
   }
 </script>
