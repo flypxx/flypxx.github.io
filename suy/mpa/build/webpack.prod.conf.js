@@ -118,6 +118,8 @@ if (config.build.bundleAnalyzerReport) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin())
 }
 
+module.exports = webpackConfig
+
 function getEntry (globPath) {
   var entries = {}
   var basename, tmp, pathname
@@ -153,5 +155,3 @@ for (var pathname in pages) {
   // 需要生成几个html文件，就配置几个HtmlWebpackPlugin对象
   module.exports.plugins.push(new HtmlWebpackPlugin(conf))
 }
-
-module.exports = webpackConfig

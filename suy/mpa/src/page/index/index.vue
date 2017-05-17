@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <head></head>
+    <v-head></v-head>
     <login></login>
     <router-view></router-view>
   </div>
@@ -12,7 +12,7 @@ import login from 'components/login/login'
 export default {
   name: 'app',
   components: {
-    head,
+    'v-head': head,
     login
   }
 }

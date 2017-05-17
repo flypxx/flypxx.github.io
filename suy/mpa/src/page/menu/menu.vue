@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <head></head>
+    <v-head></v-head>
     <item></item>
     <router-view></router-view>
   </div>
@@ -12,7 +12,7 @@ import item from 'components/item/item'
 export default {
   name: 'app',
   components: {
-    head,
+    'v-head': head,
     item
   }
 }
