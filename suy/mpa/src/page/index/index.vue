@@ -1,12 +1,20 @@
 <template>
   <div id="app">
+    <head></head>
+    <login></login>
     <router-view></router-view>
   </div>
 </template>
 
-<script>
+<script type="ecmascript-6">
+import head from 'components/header/header'
+import login from 'components/login/login'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    head,
+    login
+  }
 }
 </script>
 
