@@ -18,7 +18,9 @@ export default {
 }
 </script>
 
-<style>
+<style >
+@import '../../common/css/reset.css';
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
