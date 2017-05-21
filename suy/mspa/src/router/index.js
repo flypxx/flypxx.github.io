@@ -1,15 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
+import Promote from 'components/promote/promote'
+import Login from 'components/login/login'
+import Personal from 'components/personal/personal'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Hello',
-      component: Hello
+      path: '/promote',
+      name: 'promote',
+      component: Promote
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
+    },
+    {
+      path: '/personal',
+      name: 'personal',
+      component: Personal
     }
-  ]
+  ],
+  linkActiveClass: 'active'
 })
