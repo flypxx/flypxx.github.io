@@ -19,8 +19,12 @@
 <script type="ecmascript-6">
   import store from 'vuexpath/store'
   import router from 'routerpath/index'
+  import Header from 'components/header/header'
   // import { mapState, mapActions, mapMutations } from 'vuex'
   export default {
+    components: {
+      'v-header': Header
+    },
     data() {
       return {
         pageInfo: {
