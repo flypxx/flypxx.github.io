@@ -14,4 +14,4 @@ new Vue({
   components: { App }
 })
 
-router.push('promote')
+router.push('home')
