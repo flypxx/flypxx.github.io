@@ -16,24 +16,28 @@ export default new Router({
       component: App,
       children: [
         {
-          path: 'promote',
+          path: '',
+          redirect: '/home'
+        },
+        {
+          path: '/home',
+          name: 'home',
+          component: Home
+        },
+        {
+          path: '/promote',
           name: 'promote',
           component: Promote
         },
         {
-          path: 'login',
+          path: '/login',
           name: 'login',
           component: Login
         },
         {
-          path: 'personal',
+          path: '/personal',
           name: 'personal',
           component: Personal
-        },
-        {
-          path: 'home',
-          name: 'home',
-          component: Home
         }
       ]
     }
