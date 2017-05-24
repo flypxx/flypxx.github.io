@@ -3,9 +3,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 const Home = r => require.ensure([], () => r(require('../page/home/home')), 'home')
-const Promote = r => require.ensure([], () => r(require('../page/Promote/Promote')), 'Promote')
-const Login = r => require.ensure([], () => r(require('../page/Login/Login')), 'Login')
-const Personal = r => require.ensure([], () => r(require('../page/Personal/Personal')), 'Personal')
+const Promote = r => require.ensure([], () => r(require('../page/Promote/Promote')), 'promote')
+const Login = r => require.ensure([], () => r(require('../page/Login/Login')), 'login')
+const Personal = r => require.ensure([], () => r(require('../page/Personal/Personal')), 'personal')
 
 Vue.use(Router)
 
