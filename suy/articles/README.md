@@ -19,3 +19,7 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+### 在使用手机的portal页面的storage时遇到的一些问题
+
+不同的手机品牌的portal页面对localStorage和sessionStorage和cookie的支持不一样，所以在使用时需要根据手机的区别使用不同的方案
