@@ -1,7 +1,7 @@
 <template>
   <div class="color">
     <div class="color-box">
-      <div v-for="color in colorArr" class="color-block colorBlock" style="bgColor(color)">{{color}}</div>
+      <div v-for="color in colorArr" class="color-block colorBlock" :style="bgColor(color)">{{color}}</div>
     </div>
   </div>
 </template>
@@ -20,9 +20,9 @@
         ]
       }
     },
-    computed: {
+    methods: {
       bgColor(color) {
-        return '{background-color: ' + color + '}'
+        return 'background-color: ' + color + ';'
       }
     }
   }
