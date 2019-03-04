@@ -23,7 +23,6 @@
     "stylus-loader": "^3.0.1",
     "vue-loader": "^11.1.4",
     "vue-template-compiler": "^2.3.4",
-    "webpack": "^2.2.0",
-    "webpack-dev-server": "^2.2.0"
+    "webpack": "^2.2.0"
   }
 }
